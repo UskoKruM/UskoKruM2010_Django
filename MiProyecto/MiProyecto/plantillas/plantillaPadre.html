@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %} {% endblock %}</title>
+		<link type='text/css' href='{% static "css/plantillaBarraNavegacion.css" %}' rel='stylesheet'/>
+	</head>
+	<body>
+		{% include "plantillaBarraNavegacion.html" %}
+		<h1>UskoKruM2010</h1>
+		<img src='{% static "imagenes/logo.jpg" %}'/>
+		<br/>
+		{% block content %}
+
+		{% endblock %}
+		<p>Este es el pie de página.</p>
+		<script type='text/javascript' src='{% static "js/plantillaPadre.js" %}'></script>
+	</body>
+</html>
