@@ -15,12 +15,5 @@ class CursoAdmin(admin.ModelAdmin):
     # list_per_page = 3 # Paginación
     exclude = ('creditos',)
 
-    def datos(self, obj):
-        return obj.nombre.upper()
-
-    datos.short_description = 'XYA'
-
-# admin.site.register(Curso, CursoAdmin)
-
-# admin.site.register(Curso)
-# admin.site.register(Curso, CursoAdmin)
+    # admin.site.register(Curso)
+    # admin.site.register(Curso, CursoAdmin)

@@ -1,5 +1,6 @@
 # from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.generic import ListView
 from .models import Curso
 
 # Create your views here.
@@ -18,4 +19,23 @@ def home(request):
     # cursosListados = Curso.objects.filter(nombre__contains='g')
 
     # return HttpResponse("<h1>Hola Mundo!</h1>")
-    return render(request, "gestionCursos.html", {"cursos": cursosListados})
+    data = {
+        'titulo': 'Gestión de Cursos',
+        'cursos': cursosListados
+    }
+    # return render(request, "gestionCursos.html", {"cursos": cursosListados})
+    return render(request, "gestionCursos.html", data)
+
+
+class CursoListView(ListView):
+    model = Curso
+    template_name = 'gestionCursos.html'
+
+    def get_queryset(self):
+        return Curso.objects.filter(creditos__lte=4)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['titulo'] = 'Gestión de Cursos'
+        # print(context)
+        return context
