@@ -6,14 +6,34 @@ from .models import Curso
 
 @admin.register(Curso)
 class CursoAdmin(admin.ModelAdmin):
-    # list_display = ('id', 'nombre', 'creditos')
+    list_display = ('id', 'coloreado', 'creditos')
     # ordering = ('creditos', 'nombre')
     # search_fields = ('nombre', 'creditos')
     # list_editable = ('nombre','creditos')
     # list_display_links = ('nombre',)
     # list_filter = ('creditos',)
     # list_per_page = 3 # Paginación
-    exclude = ('creditos',)
+    # exclude = ('creditos',)
 
-    # admin.site.register(Curso)
-    # admin.site.register(Curso, CursoAdmin)
+    """
+    fieldsets = (
+        (None, {
+            'fields': ('nombre',)
+        }),
+        ('Advanced options', {
+            'classes': ('collapse', 'wide', 'extrapretty'),
+            'fields': ('creditos',)
+        })
+    )
+    """
+
+    def datos(self, obj):
+        return obj.nombre.upper()
+
+    datos.short_description = "CURSO (MAYÚS)"
+    datos.empty_value_display = "???"
+    datos.admin_order_field = 'nombre'
+
+
+# admin.site.register(Curso)
+# admin.site.register(Curso, CursoAdmin)
