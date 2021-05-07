@@ -74,6 +74,10 @@ WSGI_APPLICATION = 'Universidad.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+"""
+Usuario: uskokrum2010 | 123456
+Usuario: oscar123 | D0R14N*?1
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
