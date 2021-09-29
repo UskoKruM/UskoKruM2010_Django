@@ -1,6 +1,6 @@
 # Curso de Django ([UskoKruM2010](https://youtube.com/UskoKruM2010))
 
-Curso del framework web Django desde 0, creado en YouTube, en el canal:
+Curso del framework web Django desde 0 para la creación de un CRUD, creado en YouTube, en el canal:
 <br/><br/>
 [![YouTube](https://img.shields.io/badge/YouTube-UskoKruM2010-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=101010)](https://youtube.com/uskokrum2010)
 
