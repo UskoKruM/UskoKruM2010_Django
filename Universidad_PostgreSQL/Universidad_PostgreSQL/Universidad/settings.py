@@ -76,12 +76,13 @@ WSGI_APPLICATION = 'Universidad.wsgi.application'
 
 """
 Usuario: uskokrum2010 | 123456
-Usuario: oscar123 | D0R14N*?1
+Usuario: oscar123 | K0w16N*?1_
+Usuario: karen123 | K0w16N*?1_
 """
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'universidad2',
+        'NAME': 'universidad',
         'USER':'postgres',
         'PASSWORD': 'S3rv3r',
         'HOST': '127.0.0.1',
@@ -127,3 +128,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'

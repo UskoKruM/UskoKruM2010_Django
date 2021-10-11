@@ -33,7 +33,7 @@ class CursoListView(ListView):
 
     def get_queryset(self):
         # return Curso.objects.filter(creditos__lte=4)
-        return Curso.objects.all()
+        return Curso.objects.all().order_by('nombre')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
